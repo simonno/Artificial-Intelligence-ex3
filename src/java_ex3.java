@@ -15,13 +15,14 @@ public class java_ex3 {
     private static HierarchicalClustering.LinkageStrategy strategy;
     private static int numberOfCluster;
 
+
     /**
      * The entry point of application.
      *
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        fileName = "C:\\Users\\simon\\IdeaProjects\\artificial intelligence\\ex3\\input files\\input.txt";
+        fileName = "input.txt";
         List<Point> points = parseFile();
         HierarchicalClustering clustering = new HierarchicalClustering(points, numberOfCluster, strategy);
         clustering.runAlgorithm();
@@ -76,7 +77,7 @@ public class java_ex3 {
      */
     private static void writeToOutputFile(String solution) {
         try {
-            File statText = new File("C:\\Users\\simon\\IdeaProjects\\artificial intelligence\\ex3\\output files\\output.txt");
+            File statText = new File("output.txt");
             FileOutputStream is = new FileOutputStream(statText);
             OutputStreamWriter osw = new OutputStreamWriter(is);
             Writer w = new BufferedWriter(osw);
